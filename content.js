@@ -6,13 +6,10 @@
 (function() {
     'use strict';
 
-    // VS Code icon SVG - colorful version
-    const vscodeIconSvg = `
-        <svg aria-hidden="true" focusable="false" viewBox="0 0 16 16" width="16" height="16" display="inline-block" overflow="visible" style="vertical-align: text-bottom;">
-            <path d="M14.491 3.622 8.04 0.06a0.375 0.375 0 0 0-0.419 0.022l-5.734 4.141a0.374 0.374 0 0 0-0.166 0.309v7.831c0 0.128 0.069 0.247 0.178 0.313l1.278 0.759a1.723 1.723 0 0 0 1.755 0.044c0.534-0.306 0.847-0.863 0.847-1.494V4.308c0-0.172-0.134-0.303-0.3-0.3a0.3 0.3 0 0 0-0.3 0.3v7.679c0 0.431-0.219 0.813-0.581 1.022a1.18 1.18 0 0 1-1.206-0.025l-1.05-0.625V4.8l6.209-4.494 5.866 3.234-5.537 4.331a0.3 0.3 0 0 0-0.028 0.45c0.125 0.125 0.328 0.125 0.45 0L14.478 4.2A0.374 0.374 0 0 0 14.65 3.9a0.375 0.375 0 0 0-0.159-0.278z" fill="#007ACC"/>
-            <path d="M8.2 16c-0.194 0-0.375-0.056-0.531-0.159L2.084 12.62a0.784 0.784 0 0 1-0.391-0.675V4.053c0-0.272 0.144-0.525 0.384-0.666l5.675-3.303a0.784 0.784 0 0 1 0.888 0.047l6.587 4.866a0.784 0.784 0 0 1 0.009 1.281L8.775 15.812A0.784 0.784 0 0 1 8.2 16zM8.2 1.09c-0.035 0-0.069 0.009-0.1 0.028L2.425 4.422a0.186 0.186 0 0 0-0.091 0.159v7.891c0 0.066 0.034 0.125 0.094 0.159l5.584 3.222a0.186 0.186 0 0 0 0.284-0.159V4.052c0-0.066-0.034-0.125-0.094-0.159L8.3 1.117a0.186 0.186 0 0 0-0.1-0.028z" fill="#007ACC"/>
-        </svg>
-    `;
+    // VS Code icon from Codeberg
+    const vscodeIconSvg = `<svg viewBox="-1 -1 34 34" aria-hidden="true" width="16" height="16" style="vertical-align: middle; margin-right: 4px;">
+        <path d="M30.9 3.4 24.3.3a2 2 0 0 0-2.3.4L9.4 12.2 3.9 8c-.5-.4-1.2-.4-1.7 0L.4 9.8c-.5.5-.5 1.4 0 2L5.2 16 .4 20.3c-.5.6-.5 1.5 0 2L2.2 24c.5.5 1.2.5 1.7 0l5.5-4L22 31.2a2 2 0 0 0 2.3.4l6.6-3.2a2 2 0 0 0 1.1-1.8V5.2a2 2 0 0 0-1.1-1.8M24 23.3 14.4 16 24 8.7z" fill="#007ACC"></path>
+    </svg>`;
 
     // Continuously check for the tab navigation to appear
     function waitForCodeDropdown() {
@@ -169,16 +166,19 @@
                         }
                     }
                     
-                    // Make sure the icon sits next to the text nicely
+                    // Add styling including wireframe border
                     const styleTag = document.createElement('style');
                     styleTag.textContent = `
-                        .vscode-tab-button svg {
-                            vertical-align: middle;
-                            margin-right: 4px;
+                        .vscode-tab-button {
+                            border: 1px solid #007ACC !important;
+                            border-radius: 10px !important;
+                            margin: 0 2px !important;
+                            padding: 4px 8px !important;
                         }
                         .vscode-tab-button[aria-selected="true"] {
                             border-bottom-color: #007ACC !important;
                             color: #007ACC !important;
+                            background-color: rgba(0, 122, 204, 0.1) !important;
                         }
                     `;
                     document.head.appendChild(styleTag);

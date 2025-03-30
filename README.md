@@ -2,7 +2,7 @@
 
 Open GitHub repositories directly in Visual Studio Code with a single click. This extension adds a sleek, blue VS Code button to GitHub's repository interface.
 
-For example: ![GitHub Clone with VS Code button](https://raw.githubusercontent.com/MateKristof/github-clone-addon/assets/screenshot.png)
+![](https://github.com/MateKristof/github-clone-addon/blob/main/assets/screenshot.png?raw=true)
 
 ## Features
 

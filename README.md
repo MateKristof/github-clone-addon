@@ -15,7 +15,7 @@ Open GitHub repositories directly in Visual Studio Code with a single click. Thi
 
 ### From Chrome Web Store (Recommended)
 
-1. Visit the [GitHub Clone with VS Code](https://chrome.google.com/webstore/detail/github-clone-with-vs-code) page in the Chrome Web Store
+1. Visit the [GitHub Clone with VS Code](https://chromewebstore.google.com/detail/github-clone-with-vs-code/mmkognagidjmlpabgdkikafmndaomlhk) page in the Chrome Web Store
 2. Click "Add to Chrome"
 3. Confirm the installation when prompted
 
